@@ -35,7 +35,6 @@ async function saveEntry() {
 }
 
 
-    (uid() = user_id)
 
 </script>
 <div class="modal fade" id="newEntry" tabindex="-1">
@@ -115,7 +114,7 @@ async function saveEntry() {
     autocomplete="off"
     on:click={() => {
         emoji = emojiList.okay;
-        Mood='Okay'
+        mood='Okay'
     }}
 />
 <label class="btn btn-outline-primary" for="okay">okay</label>
@@ -128,7 +127,7 @@ async function saveEntry() {
     autocomplete="off"
     on:click={() => {
         emoji = emojiList.good;
-        Mood='Good'
+        mood='Good'
     }}
 />
 <label class="btn btn-outline-info" for="good">good</label>
@@ -141,7 +140,7 @@ async function saveEntry() {
     autocomplete="off"
     on:click={() => {
         emoji = emojiList.best;
-        Mood='Best'
+        mood='Best'
     }}
 />
 <label class="btn btn-outline-success" for="best">best</label>
