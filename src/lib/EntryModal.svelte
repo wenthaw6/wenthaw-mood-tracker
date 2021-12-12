@@ -11,7 +11,7 @@
     let emoji="😐"
     let day='1'
     let month='1'
-    let years='2021'
+    let year='2021'
     let mood='Okay'
     let comment='This is a comment'
 
@@ -51,19 +51,19 @@ async function saveEntry() {
 <div class="row">
     <div class="col">
    	 <form class="form-floating">
-   		 <input type="number" class="form-control" id="dayInput" bind-value=(day) min="1" max="31" />
+   		 <input type="number" class="form-control" id="dayInput" bind:value={day} min="1" max="31" />
    		 <label for="dayInput">Day</label>
    	 </form>
     </div>
     <div class="col">
    	 <form class="form-floating">
-   		 <input type="number" class="form-control" id="monthInput" bind-value=(month) min="1" max="12" />
+   		 <input type="number" class="form-control" id="monthInput" bind:value={month} min="1" max="12" />
    		 <label for="monthInput">Month</label>
    	 </form>
     </div>
     <div class="col">
    	 <form class="form-floating">
-   		 <input type="number" class="form-control" id="yearInput" bind-value=(2021) min="2021" />
+   		 <input type="number" class="form-control" id="yearInput" bind:value={year} min="2021" />
    		 <label for="yearInput">Year</label>
    	 </form>
     </div>
@@ -89,7 +89,7 @@ async function saveEntry() {
     autocomplete="off"
     on:click={() => {
         emoji = emojiList.worst;
-        mood='Bad'
+        mood='Worst'
     }}
 />
 <label class="btn btn-outline-danger" for="worst">Worst</label>
@@ -102,6 +102,7 @@ async function saveEntry() {
     autocomplete="off"
     on:click={() => {
         emoji = emojiList.bad;
+        mood='Bad'
     }}
 />
 <label class="btn btn-outline-warning" for="bad">bad</label>
@@ -149,7 +150,7 @@ async function saveEntry() {
 
 <!-- Comments -->
 <div class="form-floating">
-    <textarea class="form-control" bind-value={comment} id="comment" />
+    <textarea class="form-control" bind:value={comment} id="comment" />
     <label for="commentTextarea">Comments</label>
 </div>
 
