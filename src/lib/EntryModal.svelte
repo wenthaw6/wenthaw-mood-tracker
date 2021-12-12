@@ -1,5 +1,5 @@
 <script>
-    
+    import supabase from '$lib/db';
 
     let emojiList={
         worst: '😭',
@@ -15,7 +15,7 @@
     let mood='Okay'
     let comment='This is a comment'
 
-    import supabase from '$lib/db';
+    
 
 // Insert entry
 async function saveEntry() {
